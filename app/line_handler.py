@@ -6,7 +6,7 @@ import os
 
 def get_line_api() -> MessagingApi:
     configuration = Configuration(
-        access_token=os.getenv("okrqAYHi7k5oZXfHaNgZlLySDum9PDmvo0UgEu17FDS42xPHXLQ4TsTvyqtFKLWawwRiAdRpfOwJsOyHESjdNkKYU/ddxBl60FibuU43U0ghjEltPanC4GLf2erUJxEiI+1Nee90IzUHTT/ieIf3rAdB04t89/1O/w1cDnyilFU=")
+        access_token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
     )
     api_client = ApiClient(configuration)
     return MessagingApi(api_client)
@@ -19,4 +19,4 @@ def reply_text(reply_token: str, text: str):
             reply_token=reply_token,
             messages=[TextMessage(text=text)]
         )
-    )
+    )   
